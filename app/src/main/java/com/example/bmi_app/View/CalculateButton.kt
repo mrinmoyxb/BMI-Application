@@ -42,11 +42,9 @@ import androidx.navigation.NavHostController
 @SuppressLint("RememberReturnType")
 @Composable
 fun calculateButton(h: Int, w: Int, a: Int , navController: NavController){
-    //val context  = LocalContext.current
+
     val b = remember{ mutableDoubleStateOf(0.0) }
     var result: Double = 0.0
-    //var final_result = "%.2f".format(result)
-    //var final_Value = b.doubleValue
 
     Card(
         shape = RoundedCornerShape(20.dp),
