@@ -1,15 +1,13 @@
-package com.example.bmi_app
+package com.example.bmi_app.ViewModel
 
-import android.app.FragmentManager.BackStackEntry
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.BlendMode.Companion.Screen
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-
+import com.example.bmi_app.HomeScreen
+import com.example.bmi_app.ResultScreen
 
 
 @Composable

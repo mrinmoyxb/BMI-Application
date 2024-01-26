@@ -1,4 +1,4 @@
-package com.example.bmi_app
+package com.example.bmi_app.ViewModel
 
 
 
