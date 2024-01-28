@@ -30,6 +30,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.BlendMode.Companion.Screen
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -41,7 +42,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import com.example.bmi_app.ViewModel.CalculateViewModel
-
+import com.example.bmi_app.ui.theme.montserrat
 
 
 @SuppressLint("RememberReturnType")
@@ -53,9 +54,8 @@ fun calculateButton(h: Int, w: Int, a: Int , navController: NavController){
 
     Card(
         shape = RoundedCornerShape(20.dp),
-        border = BorderStroke(width = 1.dp, color = Color.Black),
         elevation = CardDefaults.cardElevation(10.dp),
-        colors = CardDefaults.cardColors(Color(0xFF26C6DA)),
+        colors = CardDefaults.cardColors(colorResource(R.color.primary_color)),
         modifier = Modifier
             .width(350.dp)
             .height(70.dp)
@@ -72,7 +72,8 @@ fun calculateButton(h: Int, w: Int, a: Int , navController: NavController){
                 "CALCULATE BMI",
                 fontSize = 32.sp,
                 color = Color.White,
-                fontWeight = FontWeight.SemiBold,
+                fontFamily = montserrat,
+                fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
             )
         }

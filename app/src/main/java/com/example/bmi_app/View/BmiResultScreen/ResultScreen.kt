@@ -29,6 +29,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import com.example.bmi_app.ui.theme.montserrat
 
 
 @SuppressLint("SuspiciousIndentation")
@@ -175,6 +176,7 @@ fun HeightIcon(heightValue: Int){
                 text = "Height",
                 fontSize = 20.sp,
                 color = Color(0xFF616161),
+                fontFamily = montserrat,
                 fontWeight = FontWeight.SemiBold,
                 textAlign = TextAlign.Center,
                 modifier = Modifier.offset(y = 40.dp)
@@ -198,13 +200,15 @@ fun WeightIcon(weightValue: Int){
                 weightValue.toString(),
                 fontSize = 50.sp,
                 color = Color.Black,
-                fontWeight = FontWeight.Bold,
+                fontFamily = montserrat,
+                fontWeight = FontWeight.SemiBold,
                 textAlign = TextAlign.Center,
             )
             Text(
                 text = "Weight",
                 fontSize = 20.sp,
                 color = Color(0xFF616161),
+                fontFamily = montserrat,
                 fontWeight = FontWeight.SemiBold,
                 textAlign = TextAlign.Center,
                 modifier = Modifier.offset(y = 40.dp)
@@ -238,13 +242,15 @@ fun BmiResultIcon(result: Double){
                     final_result.toString(),
                     fontSize = 60.sp,
                     color = Color.White,
+                    fontFamily = montserrat,
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     "kg/m2",
                     fontSize = 22.sp,
                     color = Color.White,
-                    fontWeight = FontWeight.Medium
+                    fontFamily = montserrat,
+                    fontWeight = FontWeight.SemiBold
                 )
             }
 
@@ -301,7 +307,8 @@ fun ResultText(){
     Text("Your BMI is: ",
         fontSize = 32.sp,
         color = Color.Black,
-        fontWeight = FontWeight.Bold,
+        fontFamily = montserrat,
+        fontWeight = FontWeight.SemiBold,
         textAlign = TextAlign.Center
     )
 }
