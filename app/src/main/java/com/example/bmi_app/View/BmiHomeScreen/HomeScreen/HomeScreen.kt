@@ -2,6 +2,7 @@ package com.example.bmi_app
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -65,7 +66,7 @@ fun HomeScreen(navController: NavHostController){
     ) {
 
     Column(
-        modifier = Modifier.fillMaxSize().padding(top = 55.dp),
+        modifier = Modifier.fillMaxSize().padding(top = 55.dp).background(Color.White),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
