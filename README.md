@@ -17,6 +17,9 @@ The Body Mass Index, or BMI, is a numerical value used to estimate the amount of
 Therefore, while **``BMI is a valuable tool for initial assessment, it's not a definitive measure of health.``** It's crucial to consider other factors like body composition, family history, and lifestyle habits when evaluating your overall health risk.
 
 ## UI/UX
+
+![BMI_App](https://github.com/mrinmoyxb/BMI-Application/assets/141025752/5d0b2807-0428-47f1-9114-e7c8d4fe3482)
+
 ## About Application:
 
 **`Android`**
