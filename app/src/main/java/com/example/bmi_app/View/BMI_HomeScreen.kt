@@ -55,8 +55,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-
-
+import androidx.navigation.compose.rememberNavController
 
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -291,5 +290,14 @@ fun BmiTopBar(){
         colors = TopAppBarDefaults.largeTopAppBarColors(Color.White)
     )
 }
+
+
+@Preview(showBackground = true)
+@Composable
+fun displayScreen(){
+    val navController = rememberNavController()
+    HomeScreen(navController = navController)
+}
+
 
 

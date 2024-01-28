@@ -36,7 +36,9 @@ import com.example.bmi_app.R
 @SuppressLint("SuspiciousIndentation")
 @Composable
 fun ResultScreen(navController: NavHostController, bmi_value: Float){
+
     val results: Double = bmi_value.toDouble()
+
     Column(
         modifier = Modifier
             .fillMaxSize()
