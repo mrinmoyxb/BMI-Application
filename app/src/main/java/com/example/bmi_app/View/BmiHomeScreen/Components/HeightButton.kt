@@ -34,7 +34,8 @@ fun heightBar(): Int {
         modifier = Modifier
             .height(200.dp)
             .width(350.dp),
-        elevation = CardDefaults.cardElevation(10.dp)
+        elevation = CardDefaults.cardElevation(10.dp),
+        colors = CardDefaults.cardColors(Color(0xFFEEEEEE))
     ) {
         Box(
             modifier = Modifier.fillMaxSize(),
