@@ -19,6 +19,7 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.State
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.runtime.mutableDoubleStateOf
@@ -46,15 +47,10 @@ import com.example.bmi_app.ViewModel.CalculateViewModel
 @SuppressLint("RememberReturnType")
 @Composable
 fun calculateButton(h: Int, w: Int, a: Int , navController: NavController){
-    //val b = remember{ mutableDoubleStateOf(0.0) }
-    //var result: Double = 0.0
-    val context = LocalContext.current
 
     val viewModel: CalculateViewModel = viewModel()
-    val result: Float by viewModel.result.observeAsState(initial = 0.0f)
-Column(
-    modifier = Modifier.fillMaxSize()
-) {
+    val result: State<Float> = viewModel.result.observeAsState(0.0f)
+
     Card(
         shape = RoundedCornerShape(20.dp),
         border = BorderStroke(width = 1.dp, color = Color.Black),
@@ -64,8 +60,8 @@ Column(
             .width(350.dp)
             .height(70.dp)
             .clickable(onClick = {
-                viewModel.calculateBodyMassIndex(h, w)
-                //navController.navigate("final/${result}")
+                viewModel.calculateBmi(h, w)
+                navController.navigate("final/${result.value}")
             })
     ) {
         Box(
@@ -81,8 +77,7 @@ Column(
             )
         }
     }
-    Text("Result: $result", fontSize = 20.sp, color = Color.Black)
 }
 
-}
+
 
