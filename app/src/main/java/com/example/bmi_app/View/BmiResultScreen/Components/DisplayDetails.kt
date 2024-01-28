@@ -14,7 +14,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.unit.dp
+import com.example.bmi_app.R
 
 
 @Composable
@@ -30,8 +32,8 @@ fun DisplayInfo(
         modifier = Modifier
             .width(350.dp)
             .height(100.dp),
-        colors = CardDefaults.cardColors(Color(0xFFF3E5F5)),
-        border = BorderStroke(1.dp, Color.Black),
+        colors = CardDefaults.cardColors(colorResource(id = R.color.primary_color)),
+        border = BorderStroke(1.dp, Color.White),
         elevation = CardDefaults.cardElevation(8.dp)
     ){
         Row(

@@ -56,7 +56,7 @@ fun HealthSummaryScreen(bmiResult: Double){
         shape = RoundedCornerShape(20.dp),
         colors = CardDefaults.cardColors(Color(0xFFECEFF1)),
         modifier = Modifier
-            .height(200.dp)
+            .height(220.dp)
             .width(350.dp),
         border = BorderStroke(1.dp, Color.Black),
         elevation = CardDefaults.cardElevation(10.dp)

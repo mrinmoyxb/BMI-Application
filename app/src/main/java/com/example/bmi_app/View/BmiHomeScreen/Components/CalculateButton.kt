@@ -49,6 +49,10 @@ import com.example.bmi_app.ui.theme.montserrat
 @Composable
 fun calculateButton(h: Int, w: Int, a: Int , navController: NavController){
 
+    val age: Int = a
+    val height: Int = h
+    val weight: Int = w
+
     val viewModel: CalculateViewModel = viewModel()
     val result: State<Float> = viewModel.result.observeAsState(0.0f)
 
@@ -61,7 +65,7 @@ fun calculateButton(h: Int, w: Int, a: Int , navController: NavController){
             .height(70.dp)
             .clickable(onClick = {
                 viewModel.calculateBmi(h, w)
-                navController.navigate("final/${result.value}")
+                navController.navigate("final/${result.value}/${age}/${height}/${weight}")
             })
     ) {
         Box(

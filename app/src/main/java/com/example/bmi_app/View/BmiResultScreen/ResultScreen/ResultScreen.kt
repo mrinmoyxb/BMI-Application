@@ -41,7 +41,7 @@ import com.example.bmi_app.ui.theme.montserrat
 
 @SuppressLint("SuspiciousIndentation")
 @Composable
-fun ResultScreen(navController: NavHostController, bmi_value: Float){
+fun ResultScreen(navController: NavHostController, bmi_value: Float, age: Int, height: Int, weight: Int){
 
     val results: Double = bmi_value.toDouble()
 
@@ -59,7 +59,7 @@ fun ResultScreen(navController: NavHostController, bmi_value: Float){
         Spacer(modifier = Modifier.height(40.dp))
         ResultStatement(results)
         Spacer(modifier = Modifier.height(40.dp))
-        DisplayInfo("Male", painterResource(id = R.drawable.man_black), 22, 165, 62)
+        DisplayInfo("Male", painterResource(id = R.drawable.man_black), age, height, weight)
         Spacer(modifier = Modifier.height(20.dp))
         HealthSummaryScreen(results)
 
@@ -72,6 +72,6 @@ fun ResultScreen(navController: NavHostController, bmi_value: Float){
 @Composable
 fun displayResult(){
     val navController = rememberNavController()
-    ResultScreen(navController = navController, bmi_value = 23.2f)
+    //ResultScreen(navController = navController, bmi_value = 23.2f)
 }
 

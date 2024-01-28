@@ -28,7 +28,8 @@ fun WeightIcon(weightValue: Int){
             Text(
                 weightValue.toString(),
                 fontSize = 50.sp,
-                color = Color.Black,
+                //color = Color.Black,
+                color = Color.White,
                 fontFamily = montserrat,
                 fontWeight = FontWeight.SemiBold,
                 textAlign = TextAlign.Center,
@@ -36,7 +37,8 @@ fun WeightIcon(weightValue: Int){
             Text(
                 text = "Weight",
                 fontSize = 18.sp,
-                color = Color(0xFF616161),
+                color = Color.White,
+                //color = Color(0xFF616161),
                 fontFamily = montserrat,
                 fontWeight = FontWeight.SemiBold,
                 textAlign = TextAlign.Center,

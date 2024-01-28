@@ -28,14 +28,16 @@ fun HeightIcon(heightValue: Int){
             Text(
                 heightValue.toString(),
                 fontSize = 50.sp,
-                color = Color.Black,
+                //color = Color.Black,
+                color = Color.White,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
             )
             Text(
                 text = "Height",
                 fontSize = 18.sp,
-                color = Color(0xFF616161),
+                color = Color.White,
+                //color = Color(0xFF616161),
                 fontFamily = montserrat,
                 fontWeight = FontWeight.SemiBold,
                 textAlign = TextAlign.Center,
