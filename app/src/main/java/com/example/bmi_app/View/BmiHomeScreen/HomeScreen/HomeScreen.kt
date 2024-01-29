@@ -49,7 +49,9 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.bmi_app.View.BmiHomeScreen.Components.BmiTopBar
-import com.example.bmi_app.View.BmiHomeScreen.Components.GenderCard
+import com.example.bmi_app.View.BmiHomeScreen.Components.GenderFemaleCard
+import com.example.bmi_app.View.BmiHomeScreen.Components.GenderMaleCard
+import com.example.bmi_app.View.BmiHomeScreen.Components.GenderState
 import com.example.bmi_app.View.BmiHomeScreen.Components.TextHeading
 import com.example.bmi_app.View.BmiHomeScreen.Components.ageInputBar
 
@@ -61,6 +63,8 @@ fun HomeScreen(navController: NavHostController){
     var h: Int = 0
     var w: Int = 0
     var a: Int = 0
+    var sex: String = ""
+
     Scaffold(
         topBar = {BmiTopBar()},
     ) {
@@ -73,19 +77,24 @@ fun HomeScreen(navController: NavHostController){
         Row(
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            GenderCard(
+            GenderMaleCard(
                 blackIcon = painterResource(id = R.drawable.man_black),
                 blueIcon = painterResource(id = R.drawable.men_blue),
-                text = "Male"
+                text = "Male",
             )
             Spacer(modifier = Modifier.width(20.dp))
-            GenderCard(
+            GenderFemaleCard(
                 blackIcon = painterResource(id = R.drawable.women_black),
                 blueIcon = painterResource(id = R.drawable.women_blue),
                 text = "Female"
             )
         }
 
+        sex = if(GenderState.male){
+            "Male"
+        } else{
+            "Female"
+        }
         Spacer(modifier = Modifier.height(20.dp))
 
         // Age and Weight Heading
@@ -124,7 +133,7 @@ fun HomeScreen(navController: NavHostController){
         Spacer(modifier = Modifier.height(10.dp))
         h = heightBar()
         Spacer(modifier = Modifier.height(25.dp))
-        calculateButton(h, w, a, navController)
+        calculateButton(h, w, a, sex, navController)
     }
     }
 }

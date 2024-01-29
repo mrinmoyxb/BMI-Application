@@ -20,7 +20,7 @@ fun SetUpNavGraph(navController: NavHostController){
         }
 
         // result screen
-        composable(route = "final/{bmi_value}/{age}/{height}/{weight}", arguments = listOf(
+        composable(route = "final/{bmi_value}/{age}/{height}/{weight}/{sex}", arguments = listOf(
                 navArgument("bmi_value"){
                     type = NavType.FloatType
                 },
@@ -32,6 +32,9 @@ fun SetUpNavGraph(navController: NavHostController){
                 },
                 navArgument("weight"){
                     type = NavType.IntType
+                },
+                navArgument("sex"){
+                    type = NavType.StringType
                 }
             )
         )
@@ -40,7 +43,8 @@ fun SetUpNavGraph(navController: NavHostController){
             val age = it.arguments!!.getInt("age")
             val height = it.arguments!!.getInt("height")
             val weight = it.arguments!!.getInt("weight")
-            ResultScreen(navController = navController, bmi_value = bmi_r, age = age, height = height, weight = weight)
+            val sex = it.arguments!!.getString("sex")
+            ResultScreen(navController = navController, bmi_value = bmi_r, age = age, height = height, weight = weight, sex = sex!!)
         }
     }
 }

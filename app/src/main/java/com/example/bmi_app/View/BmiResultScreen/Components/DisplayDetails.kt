@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.bmi_app.R
 
@@ -27,6 +28,9 @@ fun DisplayInfo(
     height: Int,
     weight: Int
 ){
+    val male = painterResource(id = R.drawable.man_white)
+    val female = painterResource(id = R.drawable.women_white)
+
     Card(
         shape = RoundedCornerShape(20.dp),
         modifier = Modifier

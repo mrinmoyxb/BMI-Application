@@ -41,7 +41,7 @@ import com.example.bmi_app.ui.theme.montserrat
 
 @SuppressLint("SuspiciousIndentation")
 @Composable
-fun ResultScreen(navController: NavHostController, bmi_value: Float, age: Int, height: Int, weight: Int){
+fun ResultScreen(navController: NavHostController, bmi_value: Float, age: Int, height: Int, weight: Int, sex: String){
 
     val results: Double = bmi_value.toDouble()
 

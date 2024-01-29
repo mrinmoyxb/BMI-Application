@@ -37,7 +37,7 @@ fun GenderIcon(sex: String, imgSource: Painter){
             Text(
                 sex,
                 fontSize = 18.sp,
-                color = Color(0xFF616161),
+                color = Color.White,
                 fontFamily = montserrat,
                 fontWeight = FontWeight.SemiBold,
                 textAlign = TextAlign.Center,
