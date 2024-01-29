@@ -12,11 +12,16 @@ The Body Mass Index, or BMI, is a numerical value used to estimate the amount of
 
 * **Helps identify potential health risks:** A high BMI is associated with an increased risk of various chronic conditions, including: Type 2 diabetes, Heart disease, Stroke, Some types of cancer, Musculoskeletal problems.
 
+**`BMI formula:`** **BMI = Weight in kilogram / (Height in meter)&sup2**
+
 **Hence, the main objective of this project is to built an Android application, through which we can easily calculate our BMI.**
 
 Therefore, while **``BMI is a valuable tool for initial assessment, it's not a definitive measure of health.``** It's crucial to consider other factors like body composition, family history, and lifestyle habits when evaluating your overall health risk.
 
 ## UI/UX
+
+![BMI_App](https://github.com/mrinmoyxb/BMI-Application/assets/141025752/5d0b2807-0428-47f1-9114-e7c8d4fe3482)
+
 ## About Application:
 
 **`Android`**
