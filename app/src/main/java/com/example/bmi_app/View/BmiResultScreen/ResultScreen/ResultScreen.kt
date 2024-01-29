@@ -44,6 +44,8 @@ import com.example.bmi_app.ui.theme.montserrat
 fun ResultScreen(navController: NavHostController, bmi_value: Float, age: Int, height: Int, weight: Int, sex: String){
 
     val results: Double = bmi_value.toDouble()
+    val male: Painter = painterResource(id = R.drawable.man_white)
+    val female: Painter = painterResource(id = R.drawable.women_white)
 
     Column(
         modifier = Modifier
@@ -59,7 +61,13 @@ fun ResultScreen(navController: NavHostController, bmi_value: Float, age: Int, h
         Spacer(modifier = Modifier.height(40.dp))
         ResultStatement(results)
         Spacer(modifier = Modifier.height(40.dp))
-        DisplayInfo("Male", painterResource(id = R.drawable.man_black), age, height, weight)
+        if(sex=="Male"){
+            DisplayInfo("Male", male, age, height, weight)
+        }
+        else if(sex=="Female"){
+            DisplayInfo("Female", female, age, height, weight)
+        }
+
         Spacer(modifier = Modifier.height(20.dp))
         HealthSummaryScreen(results)
 

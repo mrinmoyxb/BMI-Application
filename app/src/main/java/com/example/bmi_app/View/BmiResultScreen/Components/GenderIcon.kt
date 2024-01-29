@@ -32,7 +32,7 @@ fun GenderIcon(sex: String, imgSource: Painter){
                 painter = imgSource,
                 contentDescription = "",
                 modifier = Modifier.size(60.dp),
-                tint = Color.Black
+                tint = Color.White
             )
             Text(
                 sex,
