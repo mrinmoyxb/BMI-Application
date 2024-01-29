@@ -79,13 +79,13 @@ fun HomeScreen(navController: NavHostController){
         ) {
             GenderMaleCard(
                 blackIcon = painterResource(id = R.drawable.man_black),
-                blueIcon = painterResource(id = R.drawable.men_blue),
+                blueIcon = painterResource(id = R.drawable.man_primary),
                 text = "Male",
             )
             Spacer(modifier = Modifier.width(20.dp))
             GenderFemaleCard(
                 blackIcon = painterResource(id = R.drawable.women_black),
-                blueIcon = painterResource(id = R.drawable.women_blue),
+                blueIcon = painterResource(id = R.drawable.women_primary),
                 text = "Female"
             )
         }
