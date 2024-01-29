@@ -1,5 +1,5 @@
 
-# BMI-Application -> Work in Progress
+# BMI-Application 
 BMI-Application, an Android application built using Kotlin and Jetpack Compose, to calculate the BMI(Body Mass Index) of a person based on age, weight and height provided by the user.
 ## Objective:
 The Body Mass Index, or BMI, is a numerical value used to estimate the amount of body fat you have based on your weight and height. It's a simple formula to calculate, and it's widely used as a first step in assessing potential health risks related to weight.
@@ -20,7 +20,7 @@ Therefore, while **``BMI is a valuable tool for initial assessment, it's not a d
 
 ## UI/UX
 
-![BMI_App](https://github.com/mrinmoyxb/BMI-Application/assets/141025752/5d0b2807-0428-47f1-9114-e7c8d4fe3482)
+![BMI_App](https://github.com/mrinmoyxb/BMI-Application/assets/141025752/c32c66b0-81ac-47dc-b35f-6db215bc943b)
 
 ## About Application:
 
